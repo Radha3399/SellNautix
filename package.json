@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && rm -rf dist && cp -R out/. dist && mkdir -p dist/server dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json && printf 'export default { async fetch(request, env) { return env.ASSETS.fetch(request); } };\\n' > dist/server/index.js",
+    "build": "next build && rm -rf dist && mkdir -p dist/server dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json && node scripts/create-edge-bundle.mjs",
     "start": "next start",
     "lint": "next lint"
   },
