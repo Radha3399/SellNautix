@@ -41,7 +41,8 @@ export default {
     let asset = assets[pathname];
     if (!asset && !pathname.includes('.')) asset = assets[\`\${pathname}.html\`] || assets[\`\${pathname}/index.html\`];
     if (!asset) return new Response('Not found', { status: 404 });
-    return new Response(bytes(asset.body), { headers: { 'content-type': asset.type, 'cache-control': 'public, max-age=3600' } });
+    const cacheControl = asset.type.startsWith('text/html') ? 'no-store' : 'public, max-age=3600';
+    return new Response(bytes(asset.body), { headers: { 'content-type': asset.type, 'cache-control': cacheControl } });
   }
 };
 `;
