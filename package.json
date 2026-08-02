@@ -2,9 +2,10 @@
   "name": "sellnautix-website",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && rm -rf dist && mkdir -p dist/server dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json && node scripts/create-edge-bundle.mjs",
+    "build": "vite build",
     "start": "vite preview --host 0.0.0.0",
     "preview": "vite preview"
   },
