@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 const endpoint = "https://xhtejrbociaisjkkzpma.supabase.co/functions/v1/admin-amazon-seller-leads";

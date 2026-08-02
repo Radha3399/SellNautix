@@ -39,7 +39,7 @@ export default {
     let pathname = decodeURIComponent(url.pathname);
     if (pathname === '/') pathname = '/index.html';
     let asset = assets[pathname];
-    if (!asset && !pathname.includes('.')) asset = assets[\`\${pathname}.html\`] || assets[\`\${pathname}/index.html\`];
+    if (!asset && !pathname.includes('.')) asset = assets['/index.html'];
     if (!asset) return new Response('Not found', { status: 404 });
     const cacheControl = asset.type.startsWith('text/html') ? 'no-store' : 'public, max-age=3600';
     return new Response(bytes(asset.body), { headers: { 'content-type': asset.type, 'cache-control': cacheControl } });

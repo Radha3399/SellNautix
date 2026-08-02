@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 
 const leadEndpoint = "https://xhtejrbociaisjkkzpma.supabase.co/functions/v1/submit-amazon-seller-lead";
