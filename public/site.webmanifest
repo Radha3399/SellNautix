@@ -1,0 +1,21 @@
+{
+  "name": "SellNautix",
+  "short_name": "SellNautix",
+  "description": "Grow and protect your Amazon business with expert account management, advertising optimisation, listing support, compliance guidance, training, and reinstatement services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#cc4e00",
+  "theme_color": "#cc4e00",
+  "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

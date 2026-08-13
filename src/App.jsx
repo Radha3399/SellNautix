@@ -8,7 +8,7 @@ import LeadsAdminPage from "../app/admin/leads/page";
 import { Redirect, useRouter } from "./router";
 
 const pageMetadata = [
-  { match: (path) => path === "/", title: "SellNautix | Amazon Growth & Marketplace Operations", description: "SellNautix helps brands grow on Amazon with intelligent account management, advertising, listing optimization, compliance, and practical seller training." },
+  { match: (path) => path === "/", title: "SellNautix | Amazon Account Management & Advertising Services", description: "Grow and protect your Amazon business with expert account management, advertising optimisation, listing support, compliance guidance, training, and reinstatement services." },
   { match: (path) => path === "/contact", title: "Contact SellNautix | Growth Diagnostic", description: "Tell SellNautix about your Amazon growth opportunity." },
   { match: (path) => path === "/privacy", title: "Privacy Policy | SellNautix", description: "SellNautix privacy policy." },
   { match: (path) => path === "/terms", title: "Terms & Conditions | SellNautix", description: "SellNautix terms and conditions." },

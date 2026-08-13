@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 352" role="img" aria-labelledby="title">
+  <title id="title">SellNautix growth chart symbol</title>
+  <rect width="352" height="352" fill="#cc4e00"/>
+  <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="176" cy="176" r="155"/>
+    <circle cx="176" cy="176" r="135"/>
+    <path d="M88 203c49 4 96-20 128-60l18 16"/>
+    <path d="m235 139 7 38-38-5" fill="#fff" stroke="none"/>
+  </g>
+  <g fill="#fff">
+    <rect x="86" y="230" width="38" height="64" rx="9"/>
+    <rect x="145" y="195" width="38" height="99" rx="9"/>
+    <rect x="204" y="165" width="38" height="129" rx="9"/>
+  </g>
+</svg>
