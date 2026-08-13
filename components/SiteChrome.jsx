@@ -1,7 +1,7 @@
 import { Link } from "../src/router";
 import { useState } from "react";
 
-export function Mark() { return <Link to="/" className="mark" aria-label="SellNautix home"><span className="mark-orbit">S</span><span>SELL<span>NAUTIX</span></span></Link>; }
+export function Mark() { return <Link to="/" className="mark" aria-label="SellNautix home"><img src="/brand/sellnautix-logo.png" alt="SellNautix" width="1200" height="316" /></Link>; }
 
 export function Header() {
   const [open, setOpen] = useState(false);
