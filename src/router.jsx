@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { trackEvent } from "./analytics";
 
 const RouterContext = createContext(null);
 const readLocation = () => ({ pathname: window.location.pathname, hash: window.location.hash, search: window.location.search });
@@ -33,6 +34,11 @@ export function Link({ to, onClick, replace, ...props }) {
   return <a href={to} onClick={(event) => {
     onClick?.(event);
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || props.target || !to.startsWith("/")) return;
+    if (to === "/contact") {
+      trackEvent("contact_cta_click", {
+        cta_text: event.currentTarget.textContent?.replace(/\s+/g, " ").trim().slice(0, 100) || "Contact"
+      });
+    }
     event.preventDefault();
     navigate(to, { replace });
   }} {...props} />;

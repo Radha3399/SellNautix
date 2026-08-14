@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { trackEvent } from "../src/analytics";
 
 const leadEndpoint = "https://xhtejrbociaisjkkzpma.supabase.co/functions/v1/submit-amazon-seller-lead";
 
@@ -24,6 +25,7 @@ export default function ContactForm() {
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || "Unable to save your request.");
+      trackEvent("contact_form_submit", { form_name: "growth_diagnostic" });
       setSent(true);
     } catch (submissionError) {
       setError(submissionError.message || "Unable to save your request. Please try again.");
